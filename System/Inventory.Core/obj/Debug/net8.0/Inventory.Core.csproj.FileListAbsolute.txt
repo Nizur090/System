@@ -1,0 +1,13 @@
+/workspace/System/Inventory.Core/bin/Debug/net8.0/Inventory.Core.deps.json
+/workspace/System/Inventory.Core/bin/Debug/net8.0/Inventory.Core.dll
+/workspace/System/Inventory.Core/bin/Debug/net8.0/Inventory.Core.pdb
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.csproj.AssemblyReference.cache
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.GeneratedMSBuildEditorConfig.editorconfig
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.AssemblyInfoInputs.cache
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.AssemblyInfo.cs
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.csproj.CoreCompileInputs.cache
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.sourcelink.json
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.dll
+/workspace/System/Inventory.Core/obj/Debug/net8.0/refint/Inventory.Core.dll
+/workspace/System/Inventory.Core/obj/Debug/net8.0/Inventory.Core.pdb
+/workspace/System/Inventory.Core/obj/Debug/net8.0/ref/Inventory.Core.dll

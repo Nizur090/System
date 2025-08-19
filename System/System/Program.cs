@@ -1,4 +1,4 @@
-namespace System
+namespace InventoryApp
 {
     internal static class Program
     {
