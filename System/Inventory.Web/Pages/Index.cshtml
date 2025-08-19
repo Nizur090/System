@@ -1,0 +1,51 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Estoque";
+}
+
+<h1>Produtos</h1>
+
+<form method="get" class="mb-3">
+    <input type="text" name="q" value="@Model.Query" placeholder="Buscar por nome ou SKU..." />
+    <button type="submit">Buscar</button>
+    <a class="btn btn-primary" asp-page="Create">Novo</a>
+    <a class="btn btn-secondary" asp-page="Movements">Movimentações</a>
+    <a class="btn btn-outline-secondary" asp-page="Seed">Seed</a>
+    <a class="btn btn-outline-secondary" asp-page="Export">Exportar CSV</a>
+    <a class="btn btn-outline-secondary" asp-page="Import">Importar CSV</a>
+    <a class="btn btn-outline-secondary" asp-page="Reports">Relatórios</a>
+    <a class="btn btn-outline-secondary" asp-page="Settings">Configurações</a>
+    <a class="btn btn-outline-secondary" asp-page="Users">Usuários</a>
+</form>
+
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Nome</th>
+            <th>SKU</th>
+            <th>Preço</th>
+            <th>Qtd</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+    @foreach (var p in Model.Products)
+    {
+        <tr>
+            <td>@p.Id</td>
+            <td>@p.Name</td>
+            <td>@p.Sku</td>
+            <td>@p.Price.ToString("C2")</td>
+            <td>@p.Quantity</td>
+            <td>
+                <a asp-page="Edit" asp-route-id="@p.Id">Editar</a>
+                <a asp-page="Adjust" asp-route-id="@p.Id" asp-route-type="in">+Entrada</a>
+                <a asp-page="Adjust" asp-route-id="@p.Id" asp-route-type="out">-Saída</a>
+                <a asp-page="Delete" asp-route-id="@p.Id">Excluir</a>
+            </td>
+        </tr>
+    }
+    </tbody>
+    </table>
