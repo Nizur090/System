@@ -5,7 +5,6 @@ namespace InventoryApp.Data
     public static class Database
     {
         private static readonly string _dbPath = Path.Combine(AppContext.BaseDirectory, "inventory.db");
-        private static readonly string _connectionString = $"Data Source={nameof(inventory)}.db".Replace(nameof(inventory), "inventory");
 
         public static string ConnectionString => $"Data Source={_dbPath}";
 
