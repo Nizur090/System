@@ -49,7 +49,7 @@ namespace InventoryApp
             this.txtSearch.PlaceholderText = "Buscar por nome ou SKU...";
             this.txtSearch.Location = new System.Drawing.Point(20, 20);
             this.txtSearch.Width = 400;
-            this.txtSearch.TextChanged += (s, e) => this.OnSearchChanged();
+            this.txtSearch.TextChanged += new System.EventHandler(this.txtSearch_TextChanged);
 
             this.gridProducts.Location = new System.Drawing.Point(20, 60);
             this.gridProducts.Size = new System.Drawing.Size(960, 500);
@@ -63,23 +63,23 @@ namespace InventoryApp
 
             this.btnAdd.Text = "Novo";
             this.btnAdd.Location = new System.Drawing.Point(20, 580);
-            this.btnAdd.Click += (s, e) => this.OnAdd();
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
 
             this.btnEdit.Text = "Editar";
             this.btnEdit.Location = new System.Drawing.Point(100, 580);
-            this.btnEdit.Click += (s, e) => this.OnEdit();
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_Click);
 
             this.btnDelete.Text = "Excluir";
             this.btnDelete.Location = new System.Drawing.Point(180, 580);
-            this.btnDelete.Click += (s, e) => this.OnDelete();
+            this.btnDelete.Click += new System.EventHandler(this.btnDelete_Click);
 
             this.btnIn.Text = "+ Entrada";
             this.btnIn.Location = new System.Drawing.Point(820, 580);
-            this.btnIn.Click += (s, e) => this.OnAdjustStock(true);
+            this.btnIn.Click += new System.EventHandler(this.btnIn_Click);
 
             this.btnOut.Text = "- Saída";
             this.btnOut.Location = new System.Drawing.Point(900, 580);
-            this.btnOut.Click += (s, e) => this.OnAdjustStock(false);
+            this.btnOut.Click += new System.EventHandler(this.btnOut_Click);
 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1000, 650);

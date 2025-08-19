@@ -34,6 +34,37 @@ namespace InventoryApp
                 .ToList();
         }
 
+        // Event handlers used by the Windows Forms designer
+        private void txtSearch_TextChanged(object? sender, EventArgs e)
+        {
+            OnSearchChanged();
+        }
+
+        private void btnAdd_Click(object? sender, EventArgs e)
+        {
+            OnAdd();
+        }
+
+        private void btnEdit_Click(object? sender, EventArgs e)
+        {
+            OnEdit();
+        }
+
+        private void btnDelete_Click(object? sender, EventArgs e)
+        {
+            OnDelete();
+        }
+
+        private void btnIn_Click(object? sender, EventArgs e)
+        {
+            OnAdjustStock(true);
+        }
+
+        private void btnOut_Click(object? sender, EventArgs e)
+        {
+            OnAdjustStock(false);
+        }
+
         private Product? GetSelected()
         {
             if (gridProducts.CurrentRow == null) return null;

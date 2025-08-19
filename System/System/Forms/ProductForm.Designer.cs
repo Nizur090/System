@@ -70,31 +70,11 @@ namespace InventoryApp.Forms
             // 
             this.btnOk.Text = "Salvar";
             this.btnOk.Location = new System.Drawing.Point(120, 220);
-            this.btnOk.Click += (s, e) =>
-            {
-                if (string.IsNullOrWhiteSpace(txtName.Text) || string.IsNullOrWhiteSpace(txtSku.Text))
-                {
-                    System.Windows.Forms.MessageBox.Show("Preencha Nome e SKU.");
-                    return;
-                }
-                var p = this.Product ?? new InventoryApp.Models.Product();
-                p.Name = txtName.Text.Trim();
-                p.Sku = txtSku.Text.Trim();
-                p.Price = numPrice.Value;
-                p.Quantity = (int)numQty.Value;
-                p.CreatedAt = p.CreatedAt == default ? DateTime.UtcNow : p.CreatedAt;
-                this.Product = p;
-                this.DialogResult = System.Windows.Forms.DialogResult.OK;
-                this.Close();
-            };
+            this.btnOk.Click += new System.EventHandler(this.btnOk_Click);
 
             this.btnCancel.Text = "Cancelar";
             this.btnCancel.Location = new System.Drawing.Point(220, 220);
-            this.btnCancel.Click += (s, e) =>
-            {
-                this.DialogResult = System.Windows.Forms.DialogResult.Cancel;
-                this.Close();
-            };
+            this.btnCancel.Click += new System.EventHandler(this.btnCancel_Click);
 
             // 
             // ProductForm
